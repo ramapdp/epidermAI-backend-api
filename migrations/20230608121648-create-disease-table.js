@@ -12,6 +12,7 @@ module.exports = {
       },
       dss_name: {
         type: Sequelize.STRING,
+        unique: true,
         allowNull: false
       },
       dss_desc: {
