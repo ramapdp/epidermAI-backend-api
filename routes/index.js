@@ -1,25 +1,33 @@
 var express = require('express');
-const Medicine = require('../models/Medicine');
-const Disease = require('../models/Disease');
-const Disease_Medicine = require('../models/Disease_Medicine');
+const models = require('../models')
 var router = express.Router();
 
 /* GET all medicines. */
 router.get('/medicines', async (req, res) => {
-  const medicines = await Medicine.findAll();
+  const medicine = await models.medicine_details.findAll({
+    attributes: ['id','mdc_name', 'mdc_img']
+  });
 
-  return res
-    .status(200)
-    .json(medicines);
+  return res.json({
+    status: 200,
+    message: "Success get all medicine data",
+    data: medicine
+  });
+  
+  // return res.json('success endpoint access');
 });
 
 /* GET all diseases. */
 router.get('/diseases', async (req, res) => {
-  // const diseases = await Disease.findAll();
+  const disease = await models.disease_details.findAll({
+    attributes: ['id','dss_name', 'dss_img']
+  });
 
-  return res
-    .status(200)
-    .json(diseases);
+  return res.json({
+    status: 200,
+    message: "Success get all disease data",
+    data: disease
+  });
 });
 
 module.exports = router;
