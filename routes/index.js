@@ -1,5 +1,7 @@
 var express = require('express');
 const Medicine = require('../models/Medicine');
+const Disease = require('../models/Disease');
+const Disease_Medicine = require('../models/Disease_Medicine');
 var router = express.Router();
 
 /* GET all medicines. */
@@ -13,7 +15,9 @@ router.get('/medicines', async (req, res) => {
 
 /* GET all diseases. */
 router.get('/diseases', async (req, res) => {
-  const diseases = await Disease.findAll();
+  const diseases = await Disease.findAll({
+    attributes: ['dss_name', 'dss_img']
+  });
 
   return res
     .status(200)
