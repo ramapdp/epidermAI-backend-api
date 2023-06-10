@@ -2,8 +2,8 @@ const { DataTypes } = require("sequelize");
 const { sequelize } = require(".");
 
 module.exports = (sequelize, DataTypes) => {
-   const Disease = sequelize.define('Disease', {
-   id: {
+  const Disease = sequelize.define('Disease', {
+    id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
@@ -20,16 +20,8 @@ module.exports = (sequelize, DataTypes) => {
     dss_img: {
       type: DataTypes.STRING,
       allowNull: false
-    },
-    createdAt: {
-      type: DataTypes.DATE,
-      allowNull: false
-    },
-    updatedAt: {
-      type: DataTypes.DATE,
-      allowNull: false
     }
-   }, {
-      tableName: 'disease_details'
-   });
+  }, {
+    tableName: 'disease_details'
+  });
 }
