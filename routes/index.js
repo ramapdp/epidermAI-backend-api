@@ -15,9 +15,7 @@ router.get('/medicines', async (req, res) => {
 
 /* GET all diseases. */
 router.get('/diseases', async (req, res) => {
-  const diseases = await Disease.findAll({
-    attributes: ['dss_name', 'dss_img']
-  });
+  // const diseases = await Disease.findAll();
 
   return res
     .status(200)

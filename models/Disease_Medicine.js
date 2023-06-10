@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-   const Disease_Medicine = sequelize.define('Disease_Medicine', {
+   const Disease_Medicine = sequelize.define('disease_medicine', {
       id: {
          type: DataTypes.INTEGER,
          primaryKey: true,
@@ -17,4 +17,6 @@ module.exports = (sequelize, DataTypes) => {
    }, {
       tableName: 'disease_medicine'
    });
+
+   return Disease_Medicine;
 }
