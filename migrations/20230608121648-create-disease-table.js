@@ -4,7 +4,7 @@
 module.exports = {
   async up (queryInterface, Sequelize) {
     await queryInterface.createTable('disease_details', {
-      id: {
+      dss_id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
         autoIncrement: true,

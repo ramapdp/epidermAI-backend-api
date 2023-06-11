@@ -10,11 +10,11 @@ module.exports = {
         autoIncrement: true,
         allowNull: false
       },
-      disease_id: {
+      dss_id: {
         type: Sequelize.INTEGER,
         allowNull: false
       },
-      medicine_id: {
+      mdc_id: {
         type: Sequelize.INTEGER,
         allowNull: false
       }

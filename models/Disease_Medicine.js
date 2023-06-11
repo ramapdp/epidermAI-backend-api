@@ -6,14 +6,17 @@ module.exports = (sequelize, DataTypes) => {
          autoIncrement: true,
          allowNull: false
       },
-      disease_id: {
+      dss_id: {
          type: DataTypes.INTEGER,
          allowNull: false
       },
-      medicine_id: {
+      mdc_id: {
          type: DataTypes.INTEGER,
          allowNull: false
       }
+   }, {
+      createdAt: false,
+      updatedAt: false
    }, {
       tableName: 'disease_medicine'
    });

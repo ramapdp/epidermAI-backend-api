@@ -61,6 +61,14 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
+// db.medicine = require('./Medicine')(sequelize, Sequelize.DataTypes);
+// db.disease = require('./Disease')(sequelize, Sequelize.DataTypes);
+// db.disease_medicine = require('./Disease_Medicine')(sequelize, Sequelize.DataTypes);
+
+// // many to many relation
+// db.disease.belongsToMany(db.medicine, {through:'disease_medicine'});
+// db.medicine.belongsToMany(db.disease, {through:'disease_medicine'});
+
 // console.log(db);
 
 module.exports = db;

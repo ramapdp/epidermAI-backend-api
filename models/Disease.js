@@ -1,6 +1,6 @@
 module.exports = (sequelize, DataTypes) => {
   const Disease = sequelize.define('disease_details', {
-    id: {
+    dss_id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       autoIncrement: true,
@@ -24,6 +24,14 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     tableName: 'disease_details'
   });
+
+  Disease.associate = (models) => {
+    Disease.belongsToMany(models.medicine_details, {
+      through: "Disease_Medicine",
+      foreignKey: 'dss_id',
+      as: 'medicine_details'
+    });
+  };
 
   return Disease;
 }
