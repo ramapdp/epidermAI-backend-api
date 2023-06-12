@@ -16,7 +16,7 @@ const sequelize = new Sequelize(
   process.env.DB_PASSWORD,
   {
     dialect: "mysql",
-    host: process.env.DB_HOST,
+    host: process.env.DB_HOSTNAME,
     dialectOptions: {
       socketPath: process.env.DB_LINK
     },
