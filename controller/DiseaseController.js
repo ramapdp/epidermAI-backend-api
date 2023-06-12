@@ -6,7 +6,7 @@ const Medicine = models.medicine_details;
 
 const getAllDiseases = async (req, res) => {
    const diseases = await Disease.findAll({
-      attributes: ['id', 'dss_name', 'dss_img']
+      attributes: ['dss_id', 'dss_name', 'dss_img']
    });
   
     return res.json({
@@ -18,7 +18,7 @@ const getAllDiseases = async (req, res) => {
 
 const getAllMedicines = async (req, res) => {
    const medicines = await Medicine.findAll({
-      attributes: ['id', 'mdc_name', 'mdc_img']
+      attributes: ['mdc_id', 'mdc_name', 'mdc_img']
    });
   
     return res.json({
