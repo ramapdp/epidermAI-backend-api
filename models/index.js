@@ -20,16 +20,19 @@ if (config.use_env_variable) {
   //   config.password,
   //   {
   //     dialect: 'mysql',
-  //     host: '127.0.0.1',
+  //     host: 34.101.197.94,
   //     pool: {
   //         max: 5,
   //         min: 0,
   //         acquire: 30000,
   //         idle: 10000
   //     },
+  //     dialectOptions: {
+  //         socketPath: '/cloudsql/adhaar-351813:us-central1:adhaar-sql'
+  //     },
   //     logging: false,
   //     operatorsAliases: false
-  //   }
+  // }
   // );
 }
 
