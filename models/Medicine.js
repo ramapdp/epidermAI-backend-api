@@ -27,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
 
   Medicine.associate = (models) => {
     Medicine.belongsToMany(models.disease_details, {
-      through: "disease_medicine",
+      through: models.disease_medicine,
       foreignKey: 'mdc_id',
       as: 'disease_details'
     });
